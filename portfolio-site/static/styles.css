@@ -1,0 +1,266 @@
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.contactdiv{
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.contactintro{
+    grid-column: 1 / -1;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contactbox{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.contact{
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    color: black;
+}
+
+#email {
+    background-image: url(/images/email0.jpeg)
+}
+
+#github {
+    background-image: url(/images/github0.jpeg);
+}
+
+#insta {
+    background-image: url(/images/insta0.png);
+}
+#spotify {
+    background-image: url(/images/spotify0.jpeg);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centered-div {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.centered-div2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+}
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-center {
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+.navbar-nav {
+    flex-direction: column;
+    text-align: center;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold;
+    color: #282828;
+  }
+
+body {
+    background: #282828;
+}
+
+.typing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: #282828;
+    animation: cursorBlink 0.8s steps(3) infinite;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    75% {
+        opacity: 1;
+    }
+
+    76%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.typing {
+    position: relative;
+}
+
+.typing h2 {
+    position: relative;
+    color: #282828;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    animation: type 5s steps(11) infinite;
+}
+
+@keyframes type {
+
+    0%,
+    100% {
+        width: 0px;
+    }
+
+    30%,
+    60% {
+        width: 260px;
+    }
+}
+
+@media(max-width: 330px) {
+    .typing h2 {
+        font-size: 3rem;
+        animation: type 5s steps(10) infinite;
+    }
+
+    @keyframes type {
+
+        0%,
+        100% {
+            width: 0px;
+        }
+
+        30%,
+        60% {
+            width: 305px;
+        }
+    }
+}
+
+.box {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #282828;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .box a {
+    color: #333;
+    text-decoration: none;
+  }
+
+.container {
+    align-items: center;
+    justify-content: center;
+}
+
+.project-boxes {
+    padding-top: 4%;
+}
+
+.rounded-image {
+    border-radius: 3%;
+  }
+
+  .gallery-container {
+    padding: 20px;
+  }
+  .gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .gallery {
+    padding-top: 4%;
+  }
+
+  #photo-text {
+    text-align: center;
+  }
+  .course-list {
+    padding: 20px;
+  }
+  .course-list-item {
+    margin-bottom: 10px;
+  }
+  .course-list-item .course-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .course-list-item .course-description {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .venture-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    max-width: 600px; /* Adjust the width as needed */
+  }
+
+  .venture-image {
+    padding: 10px;
+    max-width: 50%;
+    height: auto;
+  }
