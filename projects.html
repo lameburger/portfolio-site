@@ -2,115 +2,196 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/styles.css">
-  <link rel="icon" type="image/x-icon" href="/images/me.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Lane Burgett - Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #646055;
+            font-family: 'New Standard', serif;
+            color: whitesmoke;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Custom heading style */
+        .custom-heading {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Horizontally center items */
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        .project-box {
+            padding: 20px; /* Padding inside the box */
+            border: 2px solid #2F2A29; /* Border color */
+            border-radius: 10px; /* Rounded border */
+            margin-bottom: 20px; /* Spacing between boxes */
+            width: 80%; /* Width of the box */
+            max-width: 800px; /* Maximum width of the box */
+            margin-left: auto; /* Center horizontally */
+            margin-right: auto; /* Center horizontally */
+            overflow: hidden; /* Ensure the image doesn't overflow */
+        }
+
+        .project-image {
+            width: 100px; /* Adjust the width of the images */
+            float: right; /* Align the images to the right */
+            margin-left: 20px; /* Add some space between the text and the image */
+        }
+
+        /* Adjust navbar position */
+        .navbar.fixed-top {
+            position:relative;
+            top: 0;
+            width: 100%;
+            z-index: 10000; /* Increase z-index value */
+        }
+
+        a {
+            color: inherit; /* Inherit color from parent */
+            text-decoration: none; /* Remove underline */
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="centered-div">
-            <nav class="navbar navbar-expand navbar-light navbar-center">
-            <div class="container">
-                <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="/projects.html">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/photos.html">Photos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/ventures.html">Ventures</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/courses.html">Courses</a>
-                  </li>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" id="main" href="index.html">come home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="me.html">me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coursework.html">coursework</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photos.html">photos</a>
+                    </li>
                 </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mt-5"> <!-- Added mt-5 to give margin-top -->
+        <!-- Heading -->
+        <div class="row mb-4">
+            <div class="col text-center">
+                <h4 class="custom-heading">here is some of my work. (last updated April, '24)</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center"> <!-- Center the project boxes -->
+            <div class="col-md-8"> <!-- Adjust the width of the column -->
+                <div class="project-box">
+                    <h3>Real-time localization with LiDAR odometry using the CARLA simulated driving environment</h3>
+                    <p>Developed a LiDAR sensor-based odometry solution to predict the trajectory of a vehicle and localize it in real-time, utilizing the CARLA simulated driving environment to test varying conditions. Check the research poster out below.</p>
+                    <a href="/images/poster.png" style="color:#2F2A29;">GitHub link</a>
                 </div>
             </div>
-            </nav>
         </div>
-    </header>
-    <br>
-    <div class="centered-div">
-        <div class="container">
-            <div class="row">
-              <div class="col-12 text-container">
-                  <p class="text-wrap">I like to make things, so here is some of my work.</p>
-              </div>
+        <div class="row justify-content-center"> <!-- Center the project boxes -->
+            <div class="col-md-8"> <!-- Adjust the width of the column -->
+                <div class="project-box">
+                    <h3>Lane-keeping RC car with on-board GPU</h3>
+                    <p>Strapped an NVIDIA jetson to an RC car and trained the car to stay on paths and lane-keep. Really wanted to take the step up and develop a solution for my car, but sadly couldn't find any pistons to push the gas pedal.</p>
+                    <a href="" style="color:#2F2A29;">GitHub link</a>
+                </div>
             </div>
         </div>
+        <div class="row justify-content-center"> <!-- Center the project boxes -->
+            <div class="col-md-8"> <!-- Adjust the width of the column -->
+                <div class="project-box">
+                    <h3>Deaflingo (HackKU 2024)</h3>
+                    <p>Web app that scans a pantry and finds available recipes with the given ingredients.</p>
+                    <a href="https://devpost.com/software/deaflingo" style="color:#2F2A29;">Devpost link</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center"> <!-- Center the project boxes -->
+            <div class="col-md-8"> <!-- Adjust the width of the column -->
+                <div class="project-box">
+                    <h3>BeatFlow (Hack K-State 2023)</h3>
+                    <p>BeatFlow elevates your running experience by syncing Spotify music with your cadence. Using your phone's accelerometer, it adjusts the track playing by energy to match your cadence.</p>
+                    <a href="https://devpost.com/software/beatflow" style="color:#2F2A29;">Devpost link</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center"> <!-- Center the project boxes -->
+            <div class="col-md-8"> <!-- Adjust the width of the column -->
+                <div class="project-box">
+                    <h3>CookForMe (Hack K-State 2021)</h3>
+                    <p>Web app that scans a pantry and finds available recipes with the given ingredients.</p>
+                    <a href="https://github.com/lameburger/CookForMe" style="color:#2F2A29;">Github</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center"> <!-- Center the project boxes -->
+            <div class="col-md-8"> <!-- Adjust the width of the column -->
+                <div class="project-box">
+                    <h3>Robotic Glasses</h3>
+                    <p>Robotic glasses that use computer vision to block scary things. Pretty rough in design, but its wider view of applications is pretty cool imo.</p>
+                    <a href="https://www.youtube.com/watch?v=HpXcqRc5vv4&t=142s" style="color:#2F2A29;">YouTube video</a>
+                </div>
+            </div>
+        </div>
+          <!-- End of new projects -->
+
     </div>
 
-    <div class="project-boxes">
-        <div class="container">
-            <div class="row">
-              <div class="col-md-6 mx-auto"">
-                <div class="box">
-                  <img src="/images/jetracer.jpg" alt="Image 1" class="rounded-image">
-                  <a href="" style="color:blue;">github repo coming soon!</a>
-                  <p>this little guy can do a lot. currently training it to navigate small-scale roadways. has an on board nvidia jetson which is super dope for quick implementation.</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mx-auto"">
-                <div class="box">
-                  <img src="/images/stock.png" alt="Image 1" class="rounded-image">
-                  <a href="https://www.youtube.com/watch?v=DCUDVq8ZE5Y&t=80s" style="color:red;">youtube vid</a>
-                  <p>ever looked at a 3d printer and wondered if it could play chess? well I have. here's my 3d printer playing chess!</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <div class="box">
-                  <img src="/images/hack21.png" alt="Image 3" class="rounded-image">
-                  <a href="https://github.com/lameburger/CookForMe" style="color:blue;">github</a>
-                  <p>webapp that scans a pantry and finds available recipes with the given ingredients</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <div class="box">
-                  <img src="/images/glasses.png" alt="Image 4" class="rounded-image">
-                  <a href="https://www.youtube.com/watch?v=HpXcqRc5vv4&t=142s" style="color:red;">youtube vid</a>
-                  <p>robotic glasses that use computer vision to block scary things. pretty rough in design, but its wider view of applications is pretty cool imo</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <div class="box">
-                  <img src="/images/beatflow.jpg" alt="Image 4" class="rounded-image">
-                  <a href="https://devpost.com/software/beatflow" style="color:grey;">devpost link</a>
-                  <p>beatflow - a dope way to sync running with the energy of a song (using spotify api)</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <div class="box">
-                  <img src="/images/detector.jpg" alt="Image 4" class="rounded-image">
-                  <a href="" style="color:red;">mhs scioly !</a>
-                  <p>smaller project--learned alot about sensor calibration tho</p>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-  
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-8eUWBK0ZU1j3vBZ0wQv9VcTCaUJzDyir36Gt3nDlCLr4msaBDD7WrG3j1zo8t9Rn"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

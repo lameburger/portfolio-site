@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lane's home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #646055;
+            font-family: 'New Standard', serif;
+            color: whitesmoke;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the container */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Stack items vertically */
+            height: 100vh; /* Adjust as needed */
+        }
+
+        /* Custom heading style */
+        .custom-heading {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 3em;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Horizontally center items */
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        .navbar.fixed-top {
+            position:relative;
+            top: 0;
+            width: 100%;
+            z-index: 10000; /* Increase z-index value */
+        }
+
+        .project-box {
+            padding: 20px; /* Padding inside the box */
+            border: 2px solid #2F2A29; /* Border color */
+            border-radius: 10px; /* Rounded border */
+            margin-bottom: 20px; /* Spacing between boxes */
+            width: 80%; /* Width of the box */
+            max-width: 800px; /* Maximum width of the box */
+            margin-left: auto; /* Center horizontally */
+            margin-right: auto; /* Center horizontally */
+            overflow: hidden; /* Ensure the image doesn't overflow */
+        }
+
+        .project-image {
+            width: 100px; /* Adjust the width of the images */
+            float: right; /* Align the images to the right */
+            margin-left: 20px; /* Add some space between the text and the image */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" id="main" href="index.html">come home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="me.html">me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coursework.html">coursework</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photos.html">photos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container centered-container">
+        <!-- Heading -->
+        <div class="row mb-4">
+            <div class="col text-center">
+                <h2 class="custom-heading">Courses Taken</h2>
+            </div>
+        </div>
+
+        <!-- Course Cards -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="project-box">
+                    <div class="card-body">
+                        <h5 class="card-title">CIS115 - Introduction to Computer Science</h5>
+                        <p class="card-text">A survey of the discipline of Computing Science and its interaction with other disciplines, incorporating historical development, theories, and tools of Computing Science (algorithm design and programming). Topics include: mechanical computers, digital computers, bioinformatics, microcontrollers, robotics, security, scientific computing, simulation, and web technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="project-box">
+                    <div class="card-body">
+                        <h5 class="card-title">CIS200 - Programming Fundamentals</h5>
+                        <p class="card-text">Principles of algorithm design and their application to procedural programming: state, control structures, methods. Patterns of conditional and iterative control structure. Program testing. Introduction to arrays, classes, and objects. Programming projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="project-box">
+                    <div class="card-body">
+                        <h5 class="card-title">MATH221 - Calculus II with Analytical Geometry</h5>
+                        <p class="card-text">Continuation of MATH 220 to include transcendental functions, techniques of integration, and infinite series.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="project-box">
+                    <div class="card-body">
+                        <h5 class="card-title">MATH350 - Scholars Calculus III</h5>
+                        <p class="card-text">A continuation in the sequence of courses focused on Calculus. Provides the first semester of an integrated approach to linear algebra, multivariable calculus, and ordinary differential equations with specific topics including vector spaces, linear transformations, solutions to matrix equations, dimension, rank, eigenvalues, inner products, Sylvester’s Theorem, multi-linear algebra, vector valued functions, vector fields and general ordinary differential equations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="project-box">
+                    <div class="card-body">
+                        <h5 class="card-title">MATH351 - Scholars Calculus IVZ</h5>
+                        <p class="card-text">A continuation in the sequence of courses focused on Calculus. Provides the second semester of an integrated approach to linear algebra, multivariable calculus, and ordinary differential equations. Students will apply knowledge from one variable calculus and linear algebra to the higher dimensional setting, but many computations will take place in the low 2 and 3 variable cases. Topics include linear ordinary differential equations, Picard's Theorem, limits and continuity in many variables, partial derivatives, optimization problems, integration of functions of several variables, Fubini's Theorem, integration of differential forms and Generalized Stokes' Theorem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-8eUWBK0ZU1j3vBZ0wQv9VcTCaUJzDyir36Gt3nDlCLr4msaBDD7WrG3j1zo8t9Rn"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

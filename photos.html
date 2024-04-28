@@ -4,50 +4,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/styles.css">
   <link rel="icon" type="image/x-icon" href="/images/me.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Lane Burgett - Photos</title>
+  <title>photos</title>
+  <style>
+    body {
+        background-color: #646055;
+        font-family: 'New Standard', serif;
+        color: whitesmoke;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Custom heading style */
+    .custom-heading {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+        background-color: transparent;
+    }
+
+    .navbar-brand {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Horizontally center items */
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    .nav-link {
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    .project-box {
+        padding: 20px; /* Padding inside the box */
+        border: 2px solid #2F2A29; /* Border color */
+        border-radius: 10px; /* Rounded border */
+        margin-bottom: 20px; /* Spacing between boxes */
+        width: 80%; /* Width of the box */
+        max-width: 800px; /* Maximum width of the box */
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto; /* Center horizontally */
+        overflow: hidden; /* Ensure the image doesn't overflow */
+    }
+
+    .project-image {
+        width: 100px; /* Adjust the width of the images */
+        float: right; /* Align the images to the right */
+        margin-left: 20px; /* Add some space between the text and the image */
+    }
+
+    /* Adjust navbar position */
+    .navbar.fixed-top {
+        position:relative;
+        top: 0;
+        width: 100%;
+        z-index: 10000; /* Increase z-index value */
+    }
+
+    a {
+        color: inherit; /* Inherit color from parent */
+        text-decoration: none; /* Remove underline */
+    }
+
+    a:hover {
+        text-decoration: none; /* Remove underline on hover */
+    }
+
+    .rounded-image {
+    border-radius: 3%;
+  }
+
+  .gallery-container {
+    padding: 20px;
+  }
+  .gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .gallery {
+    padding-top: 4%;
+  }
+
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="centered-div">
-      <nav class="navbar navbar-expand navbar-light navbar-center">
-        <div class="container">
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/index.html">Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/photos.html">Photos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/ventures.html">Ventures</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/courses.html">Courses</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <br>
-  <div class="centered-div3">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <div class="row">
-        <div class="col-12 text-container">
-            <p class="text-wrap" id="photo-text">pictures captivating parts of my life (last updated october, '23).</p>
-        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="main" href="index.html">come home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="me.html">me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="coursework.html">coursework</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photos.html">photos</a>
+                </li>
+            </ul>
         </div>
     </div>
-  </div>
+</nav>
 
   <div class="gallery">
     <div class="container-fluid gallery-container">
