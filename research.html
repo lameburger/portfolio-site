@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <link rel="icon" type="image/x-icon" href="/images/me.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #000;
+            color: #f0f0f0; /* Smokey white text color */
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the container */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Stack items vertically */
+            min-height: 100vh; /* Adjust as needed */
+        }
+
+        /* Custom heading style */
+        .custom-heading {
+            font-family: 'New Standard', serif;
+            font-weight: bold;
+            font-size: 3em;
+            letter-spacing: -2px;
+            color: #f0f0f0; /* Smokey white text color */
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+
+        /* Research list */
+        .research-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            max-width: 600px; /* Limit width for better readability */
+            margin: auto; /* Center the list horizontally */
+        }
+
+        .research-list li {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #333; /* Dark background */
+            border-radius: 8px;
+        }
+
+        .research-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .research-description {
+            font-size: 1em;
+        }
+
+        .pdf-link {
+            color: #f0f0f0; /* Smokey white text color */
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .pdf-link:hover {
+            color: #ccc;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Horizontally center items */
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: #f0f0f0; /* Smokey white text color */
+            font-weight: bold;
+        }
+
+        .navbar.fixed-top {
+            position:relative;
+            top: 0;
+            width: 100%;
+            z-index: 10000; /* Increase z-index value */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container centered-container">
+        <!-- Heading -->
+        <div class="container custom-heading-container">
+            <div class="d-flex justify-content-center mb-4">
+                <a href="index.html" style="text-decoration: none;">
+                    <h2 class="custom-heading">Lane Burgett</h2>
+                </a>
+            </div>
+        </div>
+        <!-- Research List -->
+        <ul class="research-list">
+            <li>
+                <div class="research-item">
+                    <h3 class="research-title">From Sign Spottings to Spoken Language:
+                        Fine-Tuning Large Language Models for Improved
+                        Translation</h3>
+                    <p class="research-description"><b>Abstract - </b>The task of sign language translation is crucial for enhancing communication for
+                        the deaf and hard-of-hearing community. In this paper, we build upon previous
+                        work by enhancing the large language model (LLM) component of a hybrid ap-
+                        proach for sign language translation from continuous video streams. The prior
+                        hybrid approach employed a GPT-3.5 Turbo prompt to generate translations from
+                        identified sign spottings. We improve this by incorporating fine-tuning techniques
+                        and revising the prompt. We employ a sign spotter from existing literature to iden-
+                        tify individual gestures within the video stream. These identified gestures are then
+                        processed by an LLM, which constructs grammatically correct and coherent sen-
+                        tences. Our evaluation of two models demonstrates significant improvements, with
+                        the fine-tuned Gemini-1.0 Pro model showing the most successful enhancement in
+                        translation accuracy and coherence.</p>
+                    <a class="pdf-link" href="/pdfs/signlanguage.pdf" target="_blank">View PDF</a>
+                </div>
+            </li>
+            <li>
+                <div class="research-item">
+                    <h3 class="research-title">Real-time localization with LiDAR odometry using the CARLA simulated driving environment</h3>
+                    <p class="research-description"><b>Abstract - </b>Currently, LiDAR has become ubiquitous for autonomous vehicles due to its distinct ability to capture dynamic changes in an incredibly detailed map of the vehicle’s environment in real-time. In comparison to other sensors (such as stereo camera vision), LiDAR is versatile to long distances while still maintaining high definition. However, deploying and testing these systems presents a large caveat to any motivated entity who is looking to do so. Logistically, testing these models and training them on physical vehicles requires extreme resources and are computationally expensive. Though, through the use of a simulated environment testing is much more feasible. So, in this regard, I methodically approached a solution to LiDAR odometry to localize a vehicle in real-time, using sensor data to create a trajectory path. Subsequently, I used the CARLA simulation environment to test varying vehicle environments and sensor conditions.</p>
+                    <a href="/images/poster.png" style="text-decoration: none; color: #f0f0f0;"><b>View Poster</b></a>
+                </div>
+            </li>
+            <!-- Add more research items as needed -->
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-8eUWBK0ZU1j3vBZ0wQv9VcTCaUJzDyir36Gt3nDlCLr4msaBDD7WrG3j1zo8t9Rn"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

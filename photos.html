@@ -5,266 +5,163 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/images/me.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>photos</title>
+  <title>Photos</title>
   <style>
     body {
-        background-color: #646055;
-        font-family: 'New Standard', serif;
-        color: whitesmoke;
-        margin: 0;
-        padding: 0;
+      background-color: #000;
+      color: #f0f0f0; /* Smokey white text color */
+      font-family: 'New Standard', serif;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Custom heading style */
+    /* Gallery Styling */
+    .gallery {
+      padding-top: 4%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .gallery-item {
+      width: calc(33.33% - 20px); /* Three items per row, with some spacing */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Adjustments for Mobile */
+    @media (max-width: 768px) {
+      .navbar {
+        display: none; /* Hide navbar on mobile */
+      }
+
+      .gallery-item {
+        width: 100%; /* Full width on mobile */
+      }
+    }
+
     .custom-heading {
-        font-style: italic;
-        font-weight: bold;
-        font-size: 1.5em;
+      font-family: 'New Standard', serif;
+      font-weight: bold;
+      font-size: 4em;
+      letter-spacing: -5px;
+      color: #f0f0f0; /* Smokey white text color */
+      white-space: nowrap;
+      margin-top: 20px;
+      text-align: center; /* Center text horizontally */
     }
 
-    /* Navigation Bar */
-    .navbar {
-        background-color: transparent;
+    p {
+      font-family: 'Roboto Mono', monospace;
+      text-align: center;
     }
-
-    .navbar-brand {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    .navbar-nav {
-        text-align: center;
-        width: 100%;
-        display: flex;
-        justify-content: center; /* Horizontally center items */
-    }
-
-    .nav-item {
-        margin: 0 10px;
-    }
-
-    .nav-link {
-        color: whitesmoke;
-        font-weight: bold;
-    }
-
-    .project-box {
-        padding: 20px; /* Padding inside the box */
-        border: 2px solid #2F2A29; /* Border color */
-        border-radius: 10px; /* Rounded border */
-        margin-bottom: 20px; /* Spacing between boxes */
-        width: 80%; /* Width of the box */
-        max-width: 800px; /* Maximum width of the box */
-        margin-left: auto; /* Center horizontally */
-        margin-right: auto; /* Center horizontally */
-        overflow: hidden; /* Ensure the image doesn't overflow */
-    }
-
-    .project-image {
-        width: 100px; /* Adjust the width of the images */
-        float: right; /* Align the images to the right */
-        margin-left: 20px; /* Add some space between the text and the image */
-    }
-
-    /* Adjust navbar position */
-    .navbar.fixed-top {
-        position:relative;
-        top: 0;
-        width: 100%;
-        z-index: 10000; /* Increase z-index value */
-    }
-
-    a {
-        color: inherit; /* Inherit color from parent */
-        text-decoration: none; /* Remove underline */
-    }
-
-    a:hover {
-        text-decoration: none; /* Remove underline on hover */
-    }
-
-    .rounded-image {
-    border-radius: 3%;
-  }
-
-  .gallery-container {
-    padding: 20px;
-  }
-  .gallery-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-
-  .gallery {
-    padding-top: 4%;
-  }
-
-</style>
+  </style>
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" id="main" href="index.html">come home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="me.html">me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="coursework.html">coursework</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="photos.html">photos</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-  <div class="gallery">
-    <div class="container-fluid gallery-container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/working.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/meandcat.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/swing.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/robotics.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/shipping.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/nelson.jpg" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/fineday.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/red.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/slide.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/gasstation.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/cat.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/audi.JPG" alt="Image 1">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/gang.jpg" alt="Image 2">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/desert.jpg" alt="Image 3">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/hard.png" alt="Image 4">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/jarvin.jpg" alt="Image 5">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/sides.png" alt="Image 6">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/smurf.jpg" alt="Image 7">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/mirror.JPG" alt="Image 8">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/ford.jpg" alt="Image 9">
-            <div class="caption"></div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item">
-            <img src="/images/guys.jpg" alt="Image 10">
-            <div class="caption"></div>
-          </div>
-        </div>
-      </div>
+  <div class="container custom-heading-container">
+    <div class="d-flex justify-content-center mb-4">
+        <a href="index.html" style="text-decoration: none;">
+            <h2 class="custom-heading">Lane Burgett</h2>
+          </a>
     </div>
   </div>
-  
+  <p>Last updated June '24.</p>
+  <!-- Gallery Section -->
+  <div class="gallery">
+    <!-- Replace image src with your actual paths -->
+    <div class="gallery-item">
+      <img src="/images/r2.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/something.JPG" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/r3.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/r4.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/r5.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/Grad.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/polaroid1.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/polaroid2.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/working.JPG" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/meandcat.JPG" alt="Image 2">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/swing.JPG" alt="Image 3">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/shipping.JPG" alt="Image 5">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/nelson.jpg" alt="Image 6">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/fineday.JPG" alt="Image 7">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/red.JPG" alt="Image 8">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/slide.JPG" alt="Image 9">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/gasstation.JPG" alt="Image 10">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/cat.JPG" alt="Image 11">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/audi.JPG" alt="Image 12">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/gang.jpg" alt="Image 13">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/desert.jpg" alt="Image 14">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/hard.png" alt="Image 15">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/jarvin.jpg" alt="Image 16">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/sides.png" alt="Image 17">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/smurf.jpg" alt="Image 18">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/mirror.JPG" alt="Image 19">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/ford.jpg" alt="Image 20">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/guys.jpg" alt="Image 21">
+    </div>
+  </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

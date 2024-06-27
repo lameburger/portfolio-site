@@ -2,87 +2,158 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/styles.css">
-  <link rel="icon" type="image/x-icon" href="/images/me.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Lane Burgett - Ventures</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/me.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <title>Ventures</title>
+    <style>
+        body {
+            background-color: #000;
+            height: 500vh;
+            overflow-x: hidden;
+            color: #f0f0f0; /* Smokey white text color */
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the container */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Stack items vertically */
+            min-height: 100vh; /* Adjust as needed */
+        }
+
+        /* Custom heading style */
+        .custom-heading {
+            font-family: 'New Standard', serif;
+            font-weight: bold;
+            font-size: 3em;
+            letter-spacing: -2px;
+            color: #f0f0f0; /* Smokey white text color */
+            white-space: nowrap;
+            margin-top: 20px;
+        }
+
+        /* Venture boxes */
+        .venture-box {
+            background-color: #333; /* Dark background */
+            border-radius: 8px;
+            padding: 15px; /* Adjusted padding */
+            margin-bottom: 20px;
+        }
+
+        .venture-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .venture-title {
+            font-size: 1.5em; /* Smaller title font size */
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #f0f0f0; /* Smokey white text color */
+        }
+
+        .venture-description {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Horizontally center items */
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: #f0f0f0; /* Smokey white text color */
+            font-weight: bold;
+        }
+
+        .navbar.fixed-top {
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 10000; /* Increase z-index value */
+        }
+
+    </style>
 </head>
 
 <body>
-  <header>
-    <div class="centered-div">
-      <nav class="navbar navbar-expand navbar-light navbar-center">
+
+    <div class="container centered-container">
+        <!-- Heading -->
+        <div class="container custom-heading-container">
+            <div class="d-flex justify-content-center mb-4">
+                <a href="index.html" style="text-decoration: none;">
+                    <h2 class="custom-heading">Lane Burgett</h2>
+                </a>
+            </div>
+        </div>
+
+        <!-- Venture Boxes -->
         <div class="container">
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/index.html">Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/photos.html">Photos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/ventures.html">Ventures</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/courses.html">Courses</a>
-              </li>
-            </ul>
-          </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="venture-box">
+                      <img src="/images/deaflingo.png" alt="mnoke" class="venture-image">
+                      <h2 class="venture-title">Deaflingo (mar 2020 - present)</h2>
+                      <p class="venture-description">Think Duolingo and a typing game, but with sign language. The web-app uses a device's built-in camera and pulls data in real-time to detect hands, facial expressions, and body position to determine what gesture the user is making. Our web-app dynamically looks for temporal motion and decides whether or not one is making the correct sign. This isn't any boring language learning app, it's a game. A user is able to keep track of their signing speed and accuracy in the app (much like a typing game). <a href="https://deaflingo.app/">Demo Site</a></p>
+                  </div>
+              </div>
+                <div class="col-md-6">
+                    <div class="venture-box">
+                        <img src="/images/basementt.jpg" alt="my basement lol" class="venture-image">
+                        <h2 class="venture-title">Computer Business (mar 2020 - present)</h2>
+                        <p class="venture-description">I don't have an offical name for this venture of mine, but it has been my main hustle on the side. Since the pandemic, I've found a lot of joy rebuilding and selling computers in bulk to various businesses, religious institutions, and local buyers. However, a lot of my sales have been expanding internationally where a bulk of the computers end of in school distrcts in African countries. If you are interested in buying or my process, feel free to contact me.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="venture-box">
+                        <img src="/images/channel.png" alt="smash like" class="venture-image">
+                        <h2 class="venture-title">YouTube Channel (may 2020 - present)</h2>
+                        <p class="venture-description">I don't necessarily as a business for me, however I have been able generate a good amount of funds from various PC part reviews and what not. I still upload, though I have reoriented the channel to be about whatever subject I find intriguing. There's even a short film on there. Check the <a href="https://www.youtube.com/channel/UCeqEGA9dM2HhQr71ve3GkuA" class="icon-link">channel</a> out.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                <div class="venture-box">
+                    <img src="/images/steno.png" alt="meet the monoboard" class="venture-image">
+                    <h2 class="venture-title">Stenography Business (nov 2021 - feb 2022)</h2>
+                    <p class="venture-description">If you're not familiar with stenography and stenographic machines, the biggest takeaway you should know is their cost-to-entry (thousands). Seriously, people go to college just to learn how to type on these things. After learning about this I decided to try and develop a steno keyboard of my own (shown above). I developed one for less than $15 with my own circuitboard and open-source code, and then began a kickstarter campaign that sadly failed due to other (objectively better) competition.</p>
+                </div>
+              </div>
+            </div>
         </div>
-      </nav>
-    </div>
-  </header>
 
-  <div class="centered-div3">
-    <div class="container">
-        <div class="row">
-        <div class="col-12 text-container">
-            <p class="text-wrap" id="photo-text">three words: entre. preneuer. ship. yeah i've been through the paces of side hustles (anything from flipping cars to crypto) but here are some of my latest.</p>
-        </div>
-        </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="venture-box">
-          <img src="/images/basementt.jpg" alt="my basement lol" class="venture-image">
-          <h2>bytebox (mar 2020 - present)</h2>
-          <p>a computer hardware business ran out of my basement. began by sourcing hardware from various recyclers, auctions, liquidation platforms, and local buyers. lately, my main goal for the business has been moving the focal point of sales to online buyers through selling platforms, but ultimately i'll develop a bytebox ecom store. </p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="venture-box">
-          <img src="/images/steno.png" alt="meet the monoboard" class="venture-image">
-          <h2>monoboard (nov 2021 - feb 2022)</h2>
-          <p>if you're not familiar with stenography and stenographic machines, the biggest takeaway you should know is their cost-to-entry (thousands). seriously, people go to college just to learn how to type on these things. after learning about this, I decided to try and develop a steno keyboard of my own (shown above). after developing one for less than $15 with my own circuitboard and open-source code, I began a kickstarter campaign that sadly failed due to other (better) competition. nonetheless, learning about the intricacies of keyboard development was worth it.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="venture-box">
-          <img src="/images/channel.png" alt="smash like" class="venture-image">
-          <h2>YouTube Channel (may 2020 - present)</h2>
-          <p>over the past 3ish years, I have been uploading videos to my yt channel. I began by doing computer part reviews and pc tutorials, which was actually quite successfull totalling almost 1 million views from those vieos alone (+ ad revenue/affiliates). however, part reviews are one of the most boring video types to make so I moved towards fun applications of cs. sadly, they aren't getting as many views, but hey they are much less dehumanizing to make!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

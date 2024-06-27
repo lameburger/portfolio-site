@@ -4,122 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lane's home</title>
+    <link rel="icon" type="image/x-icon" href="/images/me.png">
+    <title>Lane</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/styles.css">
     <style>
         body {
-            background-color: #646055;
-        }
-
-        /* Center the container */
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Adjust as needed */
-            flex-direction: column; /* Stack items vertically */
-        }
-
-        /* Scale down the image */
-        .image-container {
-            width: 50%; /* Adjust as needed */
-            max-width: 300px; /* Max width for larger screens */
-            margin-bottom: 20px; /* Add some space below the image */
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Custom heading style */
-        .custom-heading {
-            font-family: 'New Standard', serif;
-            font-style: italic;
-            font-weight: bold;
-            font-size: 3em;
+            background: url('/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: whitesmoke;
         }
-
-        .nav-link:hover {
-            color: #f8f9fa; /* Change color on hover if desired */
-        }
-
-        .nav-links-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: -5%; /* Remove this line */
-        }
-
-        .nav-link {
-            font-family: 'New Standard', serif;
-            font-size: 1.2em;
-            color: whitesmoke;
-            text-decoration: none; /* Remove underline */
-            margin: 0 -10px; /* Adjust spacing between links */
-            font-weight: bold;
-        }
-
-        /* Styling for small icons */
-        .small-icon {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px; /* Adjust as needed */
-            margin-top: -20%;
-        }
-
-        .icon-link {
-            width: 100%;
-            height: 100%;
-        }
-
     </style>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="d-flex justify-content-center mb-4">
+            <a href="index.html" style="text-decoration: none;">
+                <h2 class="custom-heading">Lane Burgett</h2>
+              </a>
+        </div>
+    </div>
     <div class="front">
         <div class="container centered-container">
-            <!-- Heading -->
-            <div class="row mb-4">
-                <div class="col text-center">
-                    <h2 class="custom-heading">Lane Burgett</h2>
-                </div>
-            </div>
-    
-            <!-- Image -->
-            <div class="row">
-                <div class="col text-center image-container">
-                    <img src="/images/cropped.jpg" class="img-fluid" alt="Centered Image">
-                </div>
-            </div>
-    
             <!-- Navigation Links -->
-            <div class="row mt-4">
                 <div class="col text-center">
                     <div class="nav-links-container">
                         <a href="me.html" class="nav-link">me</a>
-                        <a href="projects.html" class="nav-link">projects</a>
-                        <a href="coursework.html" class="nav-link">coursework</a>
-                        <a href="photos.html" class="nav-link">photos</a>
+                        <a href="" class="nav-link">|</a>
+                        <a href="work.html" class="nav-link">work</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Small icons -->
-            <div class="row mt-4">
-                <div class="row mt-4">
-                    <div class="col text-center">
-                        <a href="https://github.com/lameburge" class="icon-link"><img src="/images/git-icon.png" alt="GitHub" class="small-icon"></a>
-                        <a href="https://www.instagram.com/laneburgett/" class="icon-link"><img src="/images/insta-icon.png" alt="Instagram" class="small-icon"></a>
-                        <a href="https://open.spotify.com/user/31w4o5j35xvmy6rvgf27u3h5lafe?si=c09df990de694797" class="icon-link"><img src="/images/spotify-icon.png" alt="Spotify" class="small-icon"></a>
-                        <a href="https://www.linkedin.com/in/lane-burgett-3839591a5" class="icon-link"><img src="/images/linkedin-icon.png" alt="LinkedIn" class="small-icon"></a>
-                    </div>
-                </div>
-            </div>
-    
         </div>
     </div>
 

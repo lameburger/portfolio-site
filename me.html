@@ -1,123 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lane's home</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/images/me.png">
+    <title>Me</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'New Standard';
+            src: url('https://fonts.example.com/new-standard.woff2') format('woff2'); /* Update with actual font source */
+        }
         body {
-            background-color: #646055;
-            font-family: 'New Standard', serif;
-            color: whitesmoke;
-            margin: 0;
-            padding: 0;
+            font-family: 'Roboto Mono', monospace;
+            background-color: black;
+            color: #F5F5F5; /* Smokey white color */
         }
 
-        /* Center the container */
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Stack items vertically */
-            height: 100vh; /* Adjust as needed */
+        img {
+            width: 50%;
+        }
+        @media (max-width: 768px) {
+            img {
+                width: 75%;
+            }
         }
 
-        /* Custom heading style */
-        .custom-heading {
-            font-style: italic;
-            font-weight: bold;
-            font-size: 3em;
+                /* Styling for small icons */
+        .small-icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px; /* Adjust as needed */
+            margin-top: -20%;
         }
-
-        /* Navigation Bar */
-        .navbar {
-            background-color: transparent;
-        }
-
-        .navbar-brand {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        .navbar-nav {
-            text-align: center;
+        
+        .icon-link {
             width: 100%;
-            display: flex;
-            justify-content: center; /* Horizontally center items */
+            height: 100%;
         }
 
-        .nav-item {
-            margin: 0 10px;
-        }
-
-        .nav-link {
-            color: whitesmoke;
+        .custom-heading {
+            font-family: 'New Standard', serif;
             font-weight: bold;
-        }
-
-        p {
+            font-size: 4em;
+            letter-spacing: -5px;
             color: whitesmoke;
-            font-weight: bold;
+            white-space: nowrap;
+            margin-top: 20px;
+            padding: 0 20px; /* Add padding for space on both left and right */
         }
-
+    
+        /* Adjust the container to center align and add horizontal padding */
+        .custom-heading-container {
+            padding: 0 20px; /* Adjust as needed */
+        }
     </style>
 </head>
-
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" id="main" href="index.html">come home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="me.html">me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="coursework.html">coursework</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="photos.html">photos</a>
-                    </li>
-                </ul>
+    <div class="container custom-heading-container">
+        <div class="d-flex justify-content-center mb-4">
+            <a href="index.html" style="text-decoration: none;">
+                <h2 class="custom-heading">Lane Burgett</h2>
+              </a>
+        </div>
+    </div>
+    <!-- Biographical Section -->
+    <div class="container me-text">
+        <p>Hey, my name is Lane. I'm 18 and am from Kansas, but am currently attending Vanderbilt University, studying computer science. I have good interest in many varying subjects, though I mostly enjoy working with hardware.</p>
+        <p>When I'm not using the computer, I like wrenching on cars, slicing at tennis balls, running small entreprenurial ventures, and taking walks. I have a lackluster ability to take pictures, but here are some <a href="photos.html">photos</a> of things in my life.</p>
+        <p>I think keyboards say a lot about a person, so here's mine.</p>
+        <img src="/images/keyboard.jpg" alt="Keyboard">
+        <br>
+        <br>
+        <p>If you are <i>nosy</i> here are some other sites that I am on.</p>
+        <div class="row mt-4">
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <a href="https://github.com/lameburge" class="icon-link"><img src="/images/git-icon.png" alt="GitHub" class="small-icon"></a>
+                    <a href="https://www.instagram.com/laneburgett/" class="icon-link"><img src="/images/insta-icon.png" alt="Instagram" class="small-icon"></a>
+                    <a href="https://open.spotify.com/user/31w4o5j35xvmy6rvgf27u3h5lafe?si=c09df990de694797" class="icon-link"><img src="/images/spotify-icon.png" alt="Spotify" class="small-icon"></a>
+                    <a href="https://www.linkedin.com/in/lane-burgett-3839591a5" class="icon-link"><img src="/images/linkedin-icon.png" alt="LinkedIn" class="small-icon"></a>
+                    <a href="https://www.youtube.com/channel/UCeqEGA9dM2HhQr71ve3GkuA" class="icon-link"><img src="/images/ytpng.webp" alt="YouTube" class="small-icon"></a>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container centered-container">
-        <!-- Heading -->
-        <div class="row mb-4">
-            <div class="col text-center">
-                <h2 class="custom-heading">me, lane</h2>
-                <p>i'm 6' 2" with a cap of some shade of red hair on my head. i enjoy finicking around with computers, and am attending georgia tech for computer science. i don't anticipate much in life other than to eventually settle on a nice piece of land and tend to it. i don't think my humor is easily accessible, but i do my best. anyways, if you would like to contact me my email is lanbur[at]ksu[dot]edu.</p>
-            </div>
-        </div>
-
+        <p>I'm always busy trying to tend to some idea. Feel free to check out some of my <a href="work.html">work</a>.</p>
+        <p>If you need to contact me my email is lanbur[at]ksu[dot]edu.</p>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-8eUWBK0ZU1j3vBZ0wQv9VcTCaUJzDyir36Gt3nDlCLr4msaBDD7WrG3j1zo8t9Rn"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

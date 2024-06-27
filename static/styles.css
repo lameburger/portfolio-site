@@ -1,5 +1,7 @@
-body {
+  body {
   background-color: #646055;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* Center the container */
@@ -26,10 +28,13 @@ body {
 /* Custom heading style */
 .custom-heading {
   font-family: 'New Standard', serif;
-  font-style: italic;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 4em;
+  letter-spacing: -5px;
   color: whitesmoke;
+  white-space: nowrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .nav-link:hover {
@@ -45,7 +50,7 @@ body {
 
 .nav-link {
   font-family: 'New Standard', serif;
-  font-size: 1.2em;
+  font-size: 2em;
   color: whitesmoke;
   text-decoration: none; /* Remove underline */
   margin: 0 -10px; /* Adjust spacing between links */
