@@ -7,10 +7,11 @@
     <title>Work</title>
     <link rel="icon" type="image/x-icon" href="/images/me.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: black;
-            font-family: 'New Standard', serif;
+            font-family: 'Roboto Mono', monospace;
             color: whitesmoke;
             margin: 0;
             padding: 0;
@@ -28,28 +29,92 @@
             text-align: center;
         }
 
-        /* Links style */
-        .work-links {
-            text-align: center;
-            margin-top: 100px;
-        }
-
-        .work-links h2 {
+        .section-heading {
             font-family: 'Roboto Mono', monospace;
             font-weight: bold;
-            font-size: 2em;
-            color: whitesmoke;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #f0f0f0;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .work-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444;
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+        }
+
+        .work-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #f0f0f0;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .work-subtitle {
+            font-size: 0.9em;
+            color: #00ff41;
+            margin-bottom: 15px;
+        }
+
+        .work-description {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #f0f0f0;
+            margin-bottom: 15px;
+        }
+
+        .work-links {
+            margin-top: 15px;
         }
 
         .work-links a {
-            color: whitesmoke;
+            color: #f0f0f0;
             text-decoration: none;
+            font-weight: bold;
+            margin-right: 15px;
             transition: color 0.3s ease;
         }
 
         .work-links a:hover {
+            color: #ccc;
+        }
+
+        .collapse-indicator {
+            float: right;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .main-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .btn-link {
             color: #f0f0f0;
+            text-decoration: none;
+            padding: 0;
+            border: none;
+            background: none;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        .btn-link:hover {
+            color: #ccc;
+        }
+
+        .btn-link:focus {
+            box-shadow: none;
         }
     </style>
 </head>
@@ -61,17 +126,224 @@
         <div class="d-flex justify-content-center mb-4">
             <a href="index.html" style="text-decoration: none;">
                 <h2 class="custom-heading">Lane Burgett</h2>
-              </a>
+            </a>
         </div>
     </div>
 
-    <!-- Links -->
-    <div class="work-links">
-        <h2><a href="coursework.html">Coursework</a></h2>
-        <h2><a href="research.html">Research</a></h2>
-        <h2><a href="ventures.html">Ventures</a></h2>
-        <h2><a href="projects.html">Projects</a></h2>
+    <div class="main-container">
+        
+        <!-- Research Section -->
+        <h2 class="section-heading">Research</h2>
+        
+        <div class="work-item">
+            <button class="btn-link work-title w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#research1" aria-expanded="false">
+                From Sign Spottings to Spoken Language: Fine-Tuning Large Language Models for Improved Translation
+                <span class="collapse-indicator">▼</span>
+            </button>
+            <div class="collapse" id="research1">
+                <div class="work-description">
+                    <strong>Abstract -</strong> The task of sign language translation is crucial for enhancing communication for the deaf and hard-of-hearing community. In this paper, we build upon previous work by enhancing the large language model (LLM) component of a hybrid approach for sign language translation from continuous video streams. The prior hybrid approach employed a GPT-3.5 Turbo prompt to generate translations from identified sign spottings. We improve this by incorporating fine-tuning techniques and revising the prompt. We employ a sign spotter from existing literature to identify individual gestures within the video stream. These identified gestures are then processed by an LLM, which constructs grammatically correct and coherent sentences. Our evaluation of two models demonstrates significant improvements, with the fine-tuned Gemini-1.0 Pro model showing the most successful enhancement in translation accuracy and coherence.
+                </div>
+                <div class="work-links">
+                    <a href="/pdfs/signlanguage.pdf" target="_blank">View PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <button class="btn-link work-title w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#research2" aria-expanded="false">
+                Real-time localization with LiDAR odometry using the CARLA simulated driving environment
+                <span class="collapse-indicator">▼</span>
+            </button>
+            <div class="collapse" id="research2">
+                <div class="work-description">
+                    <strong>Abstract -</strong> Currently, LiDAR has become ubiquitous for autonomous vehicles due to its distinct ability to capture dynamic changes in an incredibly detailed map of the vehicle's environment in real-time. In comparison to other sensors (such as stereo camera vision), LiDAR is versatile to long distances while still maintaining high definition. However, deploying and testing these systems presents a large caveat to any motivated entity who is looking to do so. Logistically, testing these models and training them on physical vehicles requires extreme resources and are computationally expensive. Though, through the use of a simulated environment testing is much more feasible. So, in this regard, I methodically approached a solution to LiDAR odometry to localize a vehicle in real-time, using sensor data to create a trajectory path. Subsequently, I used the CARLA simulation environment to test varying vehicle environments and sensor conditions.
+                </div>
+                <div class="work-links">
+                    <a href="/images/poster.png" target="_blank">View Poster</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventures Section -->
+        <h2 class="section-heading">Ventures</h2>
+        
+        <div class="work-item">
+            <div class="work-title">Acre Robotics</div>
+            <div class="work-subtitle">Raised $750k. Fastest time to ever build an autonomous tractor.</div>
+            <button class="btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#venture0" aria-expanded="false">
+                <span class="collapse-indicator">Show Details ▼</span>
+            </button>
+            <div class="collapse" id="venture0">
+                <div class="work-description">
+                    I watched Interstellar and decided to build an autonomous tractor company. I built a team of nine guys from MIT, Vanderbilt, CMU... and we built it in 30 days.
+                </div>
+                <div class="work-links">
+                    <a href="https://acre-robotics.com/" target="_blank">Website</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">Deaflingo</div>
+            <div class="work-subtitle">200k+ users, 2M impressions.</div>
+            <button class="btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#venture1" aria-expanded="false">
+                <span class="collapse-indicator">Show Details ▼</span>
+            </button>
+            <div class="collapse" id="venture1">
+                <div class="work-description">
+                    Think Duolingo and a typing game, but with sign language. The web-app uses a device's built-in camera and pulls data in real-time to detect hands, facial expressions, and body position to determine what gesture the user is making. Our web-app dynamically looks for temporal motion and decides whether or not one is making the correct sign. This isn't any boring language learning app, it's a game. A user is able to keep track of their signing speed and accuracy in the app (much like a typing game).
+                </div>
+                <div class="work-links">
+                    <a href="https://deaflingo.ai/" target="_blank">Demo Site</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">Provided African School Districts with Computers</div>
+            <div class="work-subtitle">Reached $100k ARR.</div>
+            <button class="btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#venture2" aria-expanded="false">
+                <span class="collapse-indicator">Show Details ▼</span>
+            </button>
+            <div class="collapse" id="venture2">
+                <div class="work-description">
+                    Since the pandemic, I've found a lot of joy rebuilding and selling computers in bulk to various businesses, religious institutions, and local buyers. However, a lot of my sales 
+                    have been expanding internationally where a bulk of the computers end up in school districts in African countries.
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">Stenographic Keyboards</div>
+            <div class="work-subtitle">Stenographic keyboard for 0.06% of the price of an OEM.</div>
+            <button class="btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#venture4" aria-expanded="false">
+                <span class="collapse-indicator">Show Details ▼</span>
+            </button>
+            <div class="collapse" id="venture4">
+                <div class="work-description">
+                    If you're not familiar with stenography and stenographic machines, the biggest takeaway you should know is their cost-to-entry (thousands). Seriously, people go to college just to learn how to type on these things. After learning about this I decided to try and develop a steno keyboard of my own. I developed one for less than $15 with my own circuitboard and open-source code, and then began a kickstarter campaign that sadly failed due to other (objectively better) competition.
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <h2 class="section-heading">Projects</h2>
+        
+        <div class="work-item">
+            <div class="work-title">coderace.io [v2]</div>
+            <div class="work-description">
+                Think leetcode but multiplayer. The site is built on the NextJS stack, using GraphQL, Firebase, Expressjs, and Websockets on the backend.
+            </div>
+            <div class="work-links">
+                <a href="https://www.youtube.com/watch?v=z8tGNdlJj0E" target="_blank">Demo Video</a>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">Deaflingo [v2]</div>
+            <div class="work-description">
+                Version 2 is a real site anyone can access.
+            </div>
+            <div class="work-links">
+                <a href="https://www.kickstarter.com/projects/deaflingo/1424756141?ref=6zbnhj&token=73f32e55" target="_blank">Kickstarter</a>
+                <a href="https://deaflingo.app/" target="_blank">Demo Site</a>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">CANVAS - A short film about college admissions</div>
+            <div class="work-description">
+                My friend and I made a short film for high schools preparing to apply to colleges.
+            </div>
+            <div class="work-links">
+                <a href="https://www.youtube.com/watch?v=vJxHwoFzPgk&t=20s" target="_blank">Watch Video</a>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">Lane-keeping RC car with on-board GPU</div>
+            <div class="work-description">
+                Strapped an NVIDIA Jetson to an RC car and trained the car to stay on paths and lane-keep. Really wanted to take the step up and develop a solution for my car, but sadly couldn't find any pistons to push the gas pedal.
+            </div>
+            <div class="work-links">
+                <a href="#" target="_blank">GitHub Link</a>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">Deaflingo [v1]</div>
+            <div class="work-subtitle">HackKU 2024</div>
+            <div class="work-description">
+                Imagine if Duolingo met sign language. Learning sign language shouldn't just be a quick Google search. That's why we've developed a solution where your webcam can recognize your hands, enhancing your technique and making learning more intuitive than ever before.
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">BeatFlow</div>
+            <div class="work-subtitle">Hack K-State 2023</div>
+            <div class="work-description">
+                BeatFlow elevates your running experience by syncing Spotify music with your cadence. Using your phone's accelerometer, it adjusts the track playing by energy to match your cadence.
+            </div>
+            <div class="work-links">
+                <a href="https://devpost.com/software/beatflow" target="_blank">Devpost Link</a>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">CookForMe</div>
+            <div class="work-subtitle">Hack K-State 2021</div>
+            <div class="work-description">
+                Web app that scans a pantry and finds available recipes with the given ingredients.
+            </div>
+            <div class="work-links">
+                <a href="https://github.com/lameburger/CookForMe" target="_blank">GitHub Link</a>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">Robotic Glasses</div>
+            <div class="work-description">
+                Robotic glasses that use computer vision to block scary things. Pretty rough in design, but its wider view of applications is pretty cool imo.
+            </div>
+            <div class="work-links">
+                <a href="https://www.youtube.com/watch?v=HpXcqRc5vv4&t=142s" target="_blank">YouTube Video</a>
+            </div>
+        </div>
+
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add click functionality to collapse indicators
+        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
+            button.addEventListener('click', function() {
+                const indicator = this.querySelector('.collapse-indicator');
+                if (indicator) {
+                    const target = document.querySelector(this.getAttribute('data-bs-target'));
+                    if (target.classList.contains('show')) {
+                        indicator.textContent = '▼';
+                    } else {
+                        indicator.textContent = '▲';
+                    }
+                }
+            });
+        });
+
+        // Handle the "Show Details" buttons
+        document.querySelectorAll('.btn-link:not(.work-title)').forEach(button => {
+            button.addEventListener('click', function() {
+                const indicator = this.querySelector('.collapse-indicator');
+                if (indicator) {
+                    if (indicator.textContent.includes('▼')) {
+                        indicator.textContent = 'Hide Details ▲';
+                    } else {
+                        indicator.textContent = 'Show Details ▼';
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 
