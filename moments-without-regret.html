@@ -129,16 +129,23 @@
             </div>
             
             <script>
-                // Attempt to play audio (browsers may still block this)
+                // Attempt to play audio when user navigates from link
                 document.addEventListener('DOMContentLoaded', function() {
-                    var audio = document.getElementById('bgAudio');
-                    var playPromise = audio.play();
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var shouldAutoplay = urlParams.get('autoplay');
                     
-                    if (playPromise !== undefined) {
-                        playPromise.catch(function(error) {
-                            // Auto-play was prevented, user will need to click play
-                            console.log("Autoplay prevented. User must interact with the page.");
-                        });
+                    if (shouldAutoplay === 'true') {
+                        var audio = document.getElementById('bgAudio');
+                        // Small delay to ensure audio is ready
+                        setTimeout(function() {
+                            var playPromise = audio.play();
+                            
+                            if (playPromise !== undefined) {
+                                playPromise.catch(function(error) {
+                                    console.log("Autoplay prevented despite user interaction.");
+                                });
+                            }
+                        }, 100);
                     }
                 });
             </script>
