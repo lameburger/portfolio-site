@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Without Regret - Lane Burgett</title>
+    <link rel="icon" type="image/x-icon" href="/images/me.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Roboto Mono', monospace;
+            color: whitesmoke;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Custom heading style */
+        .custom-heading {
+            font-family: 'New Standard', serif;
+            font-weight: bold;
+            font-size: 4em;
+            letter-spacing: -5px;
+            color: whitesmoke;
+            white-space: nowrap;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .writing-entry {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        .writing-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        .writing-date {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .writing-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .writing-content p {
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .back-link:hover {
+            color: #f0f0f0;
+        }
+
+        .signature {
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .big-quote {
+            font-size: 1.15em;
+            line-height: 1.6;
+            color: #f0f0f0;
+            margin: 30px 0;
+            padding: 20px 30px;
+            border-left: 4px solid #888;
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .quote-attribution {
+            font-size: 0.75em;
+            text-align: right;
+            margin-top: 15px;
+            font-style: normal;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading -->
+    <div class="container custom-heading-container">
+        <div class="d-flex justify-content-center mb-4">
+            <a href="index.html" style="text-decoration: none;">
+                <h2 class="custom-heading">Lane Burgett</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        
+        <a href="writings.html" class="back-link">← Back to Writings</a>
+        
+        <div class="writing-entry">
+            <h1 class="writing-title">Death Without Regret</h1>
+            <div class="writing-date">November 1st, 2025</div>
+            
+            <div style="margin: 20px 0; max-width: 400px;">
+                <div style="font-size: 0.9em; color: #aaa; margin-bottom: 10px;">♫ Life Has Passed Me By - Brad Oberhofer</div>
+                <audio id="bgAudio" autoplay loop style="width: 100%; height: 30px;">
+                    <source src="Life Has Passed Me By - Brad Oberhofer.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+            <script>
+                // Attempt to play audio (browsers may still block this)
+                document.addEventListener('DOMContentLoaded', function() {
+                    var audio = document.getElementById('bgAudio');
+                    var playPromise = audio.play();
+                    
+                    if (playPromise !== undefined) {
+                        playPromise.catch(function(error) {
+                            // Auto-play was prevented, user will need to click play
+                            console.log("Autoplay prevented. User must interact with the page.");
+                        });
+                    }
+                });
+            </script>
+            
+            <div class="writing-content">
+                <p>This weekend, I compulsively made the choice to fly to Colorado and climb one of its 14ers alone. Perhaps it has bitten me because as writing this now, I'm fairly confident I have mild altitude sickness. More ironically, I've never climbed a mountain before. But nonetheless, I've done it, and the feeling of reaching its crest is unmatched. My mother asked, "Why?" to which I didn't have an honest answer at the time. "Couldn't you have just gone on a long walk?" she said. She's probably right, but I'd be lying if I didn't say I had a motive. I wanted to search for a moment where I wouldn't mind dying.</p>
+
+                <p>This isn't meant to be implicitly morbid (or anything lack thereof). I find a lot of people don't think about death enough, and I want to challenge that.</p>
+
+                <p>What if your time to leave was right now? Would you have regrets? Generally, there'd probably exist a lot of shallow answers here, because at the end of it, you know your time is not now. There is no real answer, just blissful ignorance. I think most recently, the Rapture trend truly made me giggle. Not necessarily in the context of some religious tangent, but to think that there were probably a lot of people that thought about their ending. I might guess that a lot of these proposed thought patterns share some similar framework that revolves around a summation of the good and the not so good moments. Or in the same vein, moments that haven't come yet. I fall into the latter frequently. I really enjoy Walt Whitman and Robin William's answer:</p>
+
+                <div class="big-quote">
+                    "That you are here—that life exists, and identity; That the powerful play goes on, and you will contribute a verse."
+                    <div class="quote-attribution">— Walt Whitman</div>
+                </div>
+
+                <div class="big-quote">
+                    "What will your verse be?"
+                    <div class="quote-attribution">— Robin Williams</div>
+                </div>
+
+                <p>Naively, I'm always wondering when I've finally contributed a verse- some addition to this world that can live without my living. It's terribly taxing, because that verse is likely continual, in that you'd only know after you leave. So, I've been attempting to adopt a new approach. Maybe something seemingly morbid but consequentially beautiful. You see, what if we just lived to exist in moments where in the midst of them, you could die without regret?</p>
+
+                <p>Prerequisitely, I didn't know yet if that moment of summit would be the one I'd been looking for. I sat at the top of the mountain for fifteen minutes or so and thought about this. Had I done what I desired to find? Maybe. It felt like a stroke to a larger image. At fourteen thousand feet you can see every little blinking light in the distance. The same radio towers I see on the ground shine with the same vividness from above. The winds roaring up the face of the mountain are like the ones from a half cracked window on a 13th floor. The ridge of it stretches like a long dam worth driving over once more. It's all some connected hope that a life does exist, and that even if death is not the reality, you could accept it without regret.</p>
+
+                <div class="signature">- Lane</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
