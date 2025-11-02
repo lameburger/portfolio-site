@@ -129,24 +129,45 @@
             </div>
             
             <script>
-                // Attempt to play audio when user navigates from link
+                // Attempt to play audio when user navigates from link or scrolls
                 document.addEventListener('DOMContentLoaded', function() {
+                    var audio = document.getElementById('bgAudio');
+                    var hasAttemptedPlay = false;
+                    
+                    function attemptPlay() {
+                        if (!hasAttemptedPlay) {
+                            hasAttemptedPlay = true;
+                            var playPromise = audio.play();
+                            
+                            if (playPromise !== undefined) {
+                                playPromise.then(function() {
+                                    console.log("Audio playing successfully.");
+                                }).catch(function(error) {
+                                    console.log("Autoplay prevented. User needs to interact.");
+                                    hasAttemptedPlay = false; // Allow retry on scroll
+                                });
+                            }
+                        }
+                    }
+                    
+                    // Try to play if coming from autoplay link
                     var urlParams = new URLSearchParams(window.location.search);
                     var shouldAutoplay = urlParams.get('autoplay');
                     
                     if (shouldAutoplay === 'true') {
-                        var audio = document.getElementById('bgAudio');
-                        // Small delay to ensure audio is ready
-                        setTimeout(function() {
-                            var playPromise = audio.play();
-                            
-                            if (playPromise !== undefined) {
-                                playPromise.catch(function(error) {
-                                    console.log("Autoplay prevented despite user interaction.");
-                                });
-                            }
-                        }, 100);
+                        setTimeout(attemptPlay, 100);
                     }
+                    
+                    // On mobile, try to play on first scroll
+                    var scrollHandler = function() {
+                        attemptPlay();
+                        // Remove listener after first attempt
+                        window.removeEventListener('scroll', scrollHandler);
+                        window.removeEventListener('touchstart', scrollHandler);
+                    };
+                    
+                    window.addEventListener('scroll', scrollHandler, { passive: true });
+                    window.addEventListener('touchstart', scrollHandler, { passive: true });
                 });
             </script>
             
