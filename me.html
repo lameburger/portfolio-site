@@ -1,100 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/me.png">
-    <title>Me</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'New Standard';
-            src: url('https://fonts.example.com/new-standard.woff2') format('woff2'); /* Update with actual font source */
-        }
-        body {
-            font-family: 'Roboto Mono', monospace;
-            background-color: black;
-            color: #F5F5F5; /* Smokey white color */
-        }
-
-        img {
-            width: 50%;
-        }
-        @media (max-width: 768px) {
-            img {
-                width: 75%;
-            }
-        }
-
-                /* Styling for small icons */
-        .small-icon {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px; /* Adjust as needed */
-            margin-top: -20%;
-        }
-        
-        .icon-link {
-            width: 100%;
-            height: 100%;
-        }
-
-        .custom-heading {
-            font-family: 'New Standard', serif;
-            font-weight: bold;
-            font-size: 4em;
-            letter-spacing: -5px;
-            color: whitesmoke;
-            white-space: nowrap;
-            margin-top: 20px;
-            padding: 0 20px; /* Add padding for space on both left and right */
-        }
-    
-        /* Adjust the container to center align and add horizontal padding */
-        .custom-heading-container {
-            padding: 0 20px; /* Adjust as needed */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>me</title>
+<link rel="icon" href="images/me.png">
+<link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <div class="container custom-heading-container">
-        <div class="d-flex justify-content-center mb-4">
-            <a href="index.html" style="text-decoration: none;">
-                <h2 class="custom-heading">Lane Burgett</h2>
-              </a>
-        </div>
-    </div>
-    <!-- Biographical Section -->
-    <div class="container me-text">
-        <p>Hi, my name is Lane. I was born from a young mother where I spent my developing life in Kansas. I attend Vanderbilt University, studying cs / applied math.
-            Generally, my interests converge around hardware.
-        </p>
-        <p>You might also find me plucking a bass, playing a game of squash, taking a walk, or filming something.
-        Here are some <a href="photos.html">photos</a> of things in my life.</p>
-        <p>I think keyboards say a lot about a person, so here's mine.</p>
-        <img src="/images/keyboard.jpg" alt="Keyboard">
-        <br>
-        <br>
-        <p>Here are some other sites that I am on.</p>
-        <div class="row mt-4">
-            <div class="row mt-4">
-                <div class="col text-center">
-                    <a href="https://github.com/lameburge" class="icon-link"><img src="/images/git-icon.png" alt="GitHub" class="small-icon"></a>
-                    <a href="https://www.instagram.com/laneburgett/" class="icon-link"><img src="/images/insta-icon.png" alt="Instagram" class="small-icon"></a>
-                    <a href="https://open.spotify.com/user/31w4o5j35xvmy6rvgf27u3h5lafe?si=c09df990de694797" class="icon-link"><img src="/images/spotify-icon.png" alt="Spotify" class="small-icon"></a>
-                    <a href="https://www.linkedin.com/in/lane-burgett-3839591a5" class="icon-link"><img src="/images/linkedin-icon.png" alt="LinkedIn" class="small-icon"></a>
-                    <a href="https://www.youtube.com/channel/UCeqEGA9dM2HhQr71ve3GkuA" class="icon-link"><img src="/images/ytpng.webp" alt="YouTube" class="small-icon"></a>
-                </div>
-            </div>
-        </div>
-        <p>I'm always busy trying to tend to some idea. Feel free to check out some of my <a href="work.html">work</a>.</p>
-        <p>If you need to contact me my email is lane.t.burgett[at]vanderbilt[dot]edu. My inbox is always open.</p>
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<nav>
+<a href="index.html">Lane Burgett</a>
+<a href="me.html" class="here">me</a>
+<a href="work.html">work</a>
+<a href="letters.html">letters</a>
+</nav>
+<main>
+<p>Hi, my name is Lane. I was born from a young mother where I spent my developing life in Kansas. I attend Vanderbilt University, studying cs / applied math. Generally, my interests converge around hardware.</p>
+<p>You might also find me plucking a bass, playing a game of squash, taking a walk, or filming something. Here are some <a href="photos.html">photos</a> of things in my life.</p>
+<p>I think keyboards say a lot about a person, so here's mine.</p>
+<img src="images/keyboard.jpg" alt="Keyboard" style="max-width:320px">
+<p>Here are some other sites that I am on.</p>
+<p class="links">
+<a href="https://github.com/lameburge">github</a>
+<a href="https://www.instagram.com/laneburgett/">instagram</a>
+<a href="https://open.spotify.com/user/31w4o5j35xvmy6rvgf27u3h5lafe?si=c09df990de694797">spotify</a>
+<a href="https://www.linkedin.com/in/lane-burgett-3839591a5">linkedin</a>
+<a href="https://www.youtube.com/channel/UCeqEGA9dM2HhQr71ve3GkuA">youtube</a>
+</p>
+<p>I'm always busy trying to tend to some idea. Feel free to check out some of my <a href="work.html">work</a>.</p>
+<p>If you need to contact me my email is lane.t.burgett[at]vanderbilt[dot]edu. My inbox is always open.</p>
+</main>
 </body>
 </html>
