@@ -51,6 +51,7 @@ main {
 main a:not(.row) { text-decoration: underline; }
 main a:not(.row):hover { color: #888; }
 main img { margin: 1.5em 0; }
+.me-img { width: 360px; max-width: 100%; }
 blockquote { margin: 1.5em 0 1.5em 2em; font-style: italic; }
 blockquote .by { font-style: normal; color: #888; }
 .links a { margin-right: 0.75em; }
