@@ -72,9 +72,9 @@ audio { display: none; }
 .photos img { margin: 0 0 8px; }
 
 @media (max-width: 720px) {
-  nav { position: static; padding: 12vh 26px 0; }
+  nav { position: static; padding: 12vh 11vw 0; }
   nav a { display: block; }
-  .hero { min-height: 0; padding: 28px 26px 60px; justify-content: center; }
-  .hero img { height: auto; width: 78vw; max-height: 62vh; object-fit: contain; }
-  main { padding: 28px 26px 80px; max-width: none; }
+  .hero { min-height: 0; padding: 28px 11vw 60px; justify-content: center; }
+  .hero img { height: auto; width: 100%; max-height: 62vh; object-fit: contain; object-position: left top; }
+  main { padding: 28px 11vw 80px; max-width: none; }
 }
