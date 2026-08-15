@@ -68,7 +68,7 @@ audio { display: none; }
 .list a.row:hover { color: #888; }
 .list .empty { color: #888; }
 .list .gap { height: 3em; }
-.list .label { color: #888; }
+.list .label { color: #888; margin-bottom: 0.75em; }
 
 /* photos */
 .photos img { margin: 0 0 8px; }
