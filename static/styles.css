@@ -67,7 +67,7 @@ audio { display: none; }
 }
 .list a.row:hover { color: #888; }
 .list .empty { color: #888; }
-.list .gap { height: 1.5em; }
+.list .gap { height: 3em; }
 .list .label { color: #888; }
 
 /* photos */
