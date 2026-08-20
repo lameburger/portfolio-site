@@ -28,10 +28,10 @@ nav a.here { color: #888; text-decoration: underline; }
 .hero {
   min-height: 100vh;
   box-sizing: border-box;
-  padding-top: 22vh;
+  padding: 22vh 26px 0 220px;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .hero img {
   height: 56vh;
