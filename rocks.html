@@ -17,7 +17,7 @@
 <main>
 <h1>Rocks</h1>
 <p class="date">September 18th, 2026</p>
-<p class="date">&#9835; brother is your head still high - Lane</p>
+<p class="date"><a href="#" id="songToggle">&#9835; untitled</a></p>
 <audio id="bgAudio" loop>
 <source src="brother is your head still high.mp3" type="audio/mpeg">
 </audio>
@@ -39,6 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   window.addEventListener('scroll', once, { passive: true });
   window.addEventListener('touchstart', once, { passive: true });
+  window.addEventListener('click', once);
+  window.addEventListener('keydown', once);
+  document.getElementById('songToggle').addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (audio.paused) audio.play(); else audio.pause();
+  });
 });
 </script>
 
