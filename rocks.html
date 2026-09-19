@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocks</title>
+<link rel="icon" href="images/me.png">
+<link rel="stylesheet" href="static/styles.css?v=6">
+</head>
+<body>
+<nav>
+<a href="index.html">Lane B.</a>
+<a href="me.html">Me</a>
+<a href="work.html">Work</a>
+<a href="letters.html" class="here">Letters</a>
+</nav>
+<main>
+<h1>Rocks</h1>
+<p class="date">September 18th, 2026</p>
+<p class="date">&#9835; brother is your head still high - Lane</p>
+<audio id="bgAudio" loop>
+<source src="brother is your head still high.mp3" type="audio/mpeg">
+</audio>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var audio = document.getElementById('bgAudio');
+  var tried = false;
+  function attempt() {
+    if (tried) return;
+    tried = true;
+    var p = audio.play();
+    if (p !== undefined) p.catch(function () { tried = false; });
+  }
+  if (new URLSearchParams(window.location.search).get('autoplay') === 'true') setTimeout(attempt, 100);
+  var once = function () {
+    attempt();
+    window.removeEventListener('scroll', once);
+    window.removeEventListener('touchstart', once);
+  };
+  window.addEventListener('scroll', once, { passive: true });
+  window.addEventListener('touchstart', once, { passive: true });
+});
+</script>
+
+<p>I cannot always find satisfaction in the human form factor. A body feels like an abstractive and stochastic translation of what I want internally. I&rsquo;m finding that in a conversation between two, it is really four. And in this form factor, the only mutual existence is emotion. To some degree, I feel the baggage of a body. This baggage seems to be more injective though, where its physical translation is much more definitive of the emotion behind it. It&rsquo;s like those rocks that can form in a gut; they aren&rsquo;t real, it&rsquo;s only a manifestation of what&rsquo;s internal.</p>
+
+<p class="date">&mdash;</p>
+
+<p>Loneliness is real, I believe it. I respect that it&rsquo;s an emotion. Though I don&rsquo;t think the word alone is as truthful. I&rsquo;m permanently bonded to a body and I can&rsquo;t be alone from it. So in this exercise, I&rsquo;m most interested in the opposite of what the canonical definition of alone is. If there are instead four and not two, how truthful is the other&rsquo;s translation? What do they want to say that their embodiment fails to? I&rsquo;d like to say for some the form factor is actually more telling of what&rsquo;s inside when their intention is to hide or lie. Joy seems to work this way too!</p>
+
+<p class="date">&mdash;</p>
+
+<p>I cannot reliably control the bridge between me and what physically exists of me.</p>
+
+<p class="date">&mdash;</p>
+
+<p>Alleviation seems to come from creation. I feel a perfect harmony when what I want to make internally is accurately derived externally. The most alleviating is to not be trapped in a singular mode of creation. It&rsquo;s not always physical. Sometimes it&rsquo;s sonic or just visually pretty.</p>
+
+<p class="date">&mdash;</p>
+
+<p>Am I <u>alone</u> in this thought?</p>
+
+<p class="sig">- Lane</p>
+</main>
+</body>
+</html>
