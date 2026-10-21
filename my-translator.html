@@ -21,11 +21,15 @@
   opacity: 0.35; z-index: 0;
 }
 main { position: relative; }
+.mobile-art { display: none; }
 @media (max-width: 720px) {
-  .towers .tower.left { width: 100px; }
-  .towers .tower.right { width: 240px; right: -14vw; }
-  .towers .tower.left { left: -10vw; }
-  .towers .tower.right { right: -8vw; }
+  .tower, .squiggle { display: none; }
+  .mobile-art { display: block; margin-top: 2.5em; position: relative; }
+  .mobile-art .grass { display: flex; justify-content: space-between; align-items: flex-end; padding: 0 6% 0 2%; }
+  .mobile-art .grass img { width: 38px; opacity: 0.35; margin: 0; }
+  .mobile-art .grass img:nth-child(2) { width: 30px; transform: rotate(-7deg); margin-bottom: 10px; }
+  .mobile-art .grass img:nth-child(3) { width: 34px; transform: rotate(6deg); }
+  .mobile-art .climb { width: 58%; margin: 0 -4vw 0 auto; opacity: 0.18; clip-path: inset(0 0 10.4% 0); }
 }
 </style>
 </head>
