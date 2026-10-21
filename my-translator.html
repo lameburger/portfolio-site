@@ -43,6 +43,37 @@ main { position: relative; }
 <main>
 <h1>My Translator</h1>
 <p class="date">October 21st, 2026</p>
+<p class="date"><a href="#" id="songToggle">&#9835; Beach House - Jon Gould</a></p>
+<audio id="bgAudio" loop>
+<source src="jon gould beach house.mp3" type="audio/mpeg">
+</audio>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var audio = document.getElementById('bgAudio');
+  var tried = false;
+  function attempt() {
+    if (tried) return;
+    tried = true;
+    var p = audio.play();
+    if (p !== undefined) p.catch(function () { tried = false; });
+  }
+  if (new URLSearchParams(window.location.search).get('autoplay') === 'true') setTimeout(attempt, 100);
+  var once = function () {
+    attempt();
+    window.removeEventListener('scroll', once);
+    window.removeEventListener('touchstart', once);
+  };
+  window.addEventListener('scroll', once, { passive: true });
+  window.addEventListener('touchstart', once, { passive: true });
+  window.addEventListener('click', once);
+  window.addEventListener('keydown', once);
+  document.getElementById('songToggle').addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (audio.paused) audio.play(); else audio.pause();
+  });
+});
+</script>
 
 <p>When you think of someone, what do you see? What do you feel?</p>
 
