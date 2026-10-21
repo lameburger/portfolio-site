@@ -50,6 +50,7 @@ main { position: relative; }
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var audio = document.getElementById('bgAudio');
+  audio.volume = 0.5;
   var tried = false;
   function attempt() {
     if (tried) return;
