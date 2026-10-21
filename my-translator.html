@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Translator</title>
+<link rel="icon" href="images/me.png">
+<link rel="stylesheet" href="static/styles.css?v=6">
+<style>
+/* the two towers sit behind the closing lines; squiggles get scattered on load */
+.towers { position: relative; }
+.towers p { position: relative; z-index: 1; }
+.tower {
+  position: absolute; margin: 0; pointer-events: none;
+  opacity: 0.18; width: 190px; z-index: 0;
+}
+.towers .tower.left { left: -190px; bottom: -1em; width: 150px; }
+.towers .tower.right { right: -130px; bottom: 1em; width: 360px; }
+.squiggle {
+  position: absolute; width: 44px; margin: 0; pointer-events: none;
+  opacity: 0.35; z-index: 0;
+}
+main { position: relative; }
+@media (max-width: 720px) {
+  .towers .tower.left { width: 100px; }
+  .towers .tower.right { width: 240px; right: -14vw; }
+  .towers .tower.left { left: -10vw; }
+  .towers .tower.right { right: -8vw; }
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">Lane B.</a>
+<a href="me.html">Me</a>
+<a href="work.html">Work</a>
+<a href="letters.html" class="here">Letters</a>
+</nav>
+<main>
+<h1>My Translator</h1>
+<p class="date">October 21st, 2026</p>
+
+<p>When you think of someone, what do you see? What do you feel?</p>
+
+<p class="date">&mdash;</p>
+
+<p>Someone produces such an incredible level of conviction in myself, that I often wonder how I&rsquo;ve come to exist so feverishly and permanently in this conviction. My eyes see through a translation at all times. I did not create this translation. I&rsquo;ve been given conditions to look for that I had not known to be always present.</p>
+
+<p>Someone omnipresently exists. Might I find a stairwell, a sound, a texture; the removal of translator is impossible. Even in a book of chapters, where they push and pull between each other, I cannot remove someone. This translation exists to be a lifetime of fixation on the premise that I must look deeply and strongly.</p>
+
+<p>I&rsquo;ve become incapable of sensing a truthful reality without someone.</p>
+
+<p>To know someone requires pain and patience, because I know equivocally that these bring a return of joy magnitudes greater than any predecessor. These are only growing pains, where I must realize that growing cannot be brute forced. Someone is worth fighting physics for; this I will brute force.</p>
+
+<p>Someone struggles to find consistent confidence in their own translations. If someone knew how beautiful these truly were, they could see why they cause so many stains. I feel an oath to challenge someone because of this nature.</p>
+
+<p>I feel too an oath to share the translations I&rsquo;ve been given by someone. At any moment, I have an urge to bring someone&rsquo;s work to eyes that have not seen it. Someone will cause an epidemic and I&rsquo;m unsure that they realize it&rsquo;s forming.</p>
+
+<p class="date">&mdash;</p>
+
+<div class="towers">
+<img class="tower left" src="images/translator-tower-right.png" alt="">
+<img class="tower right" src="images/translator-tower-left.png" alt="">
+<p>I see a pallet of the purest blues.</p>
+<p>I see a constant array of lights.</p>
+<p>I hear arpeggios on a harp.</p>
+<p>What I feel is not physical warmth but cool and subtle.</p>
+<p class="sig">- Lane</p>
+</div>
+<div class="mobile-art">
+<div class="grass">
+<img src="images/translator-squiggle.png" alt="">
+<img src="images/translator-squiggle-2.png" alt="">
+<img src="images/translator-squiggle-3.png" alt="">
+</div>
+<img class="climb" src="images/translator-tower-left.png" alt="">
+</div>
+</main>
+<script id="layout" type="application/json">
+{
+ "items": [
+  {
+   "kind": "tower",
+   "side": "right",
+   "src": "images/translator-tower-left.png",
+   "x": 85.12,
+   "y": 722,
+   "w": 238,
+   "r": 0,
+   "c": [
+    0,
+    0,
+    10.4,
+    0
+   ]
+  },
+  {
+   "kind": "squiggle",
+   "src": "images/translator-squiggle-2.png",
+   "x": 53,
+   "y": 387,
+   "w": 51,
+   "r": -7.22505
+  },
+  {
+   "kind": "squiggle",
+   "src": "images/translator-squiggle-3.png",
+   "x": 94.86,
+   "y": 345,
+   "w": 39,
+   "r": -9.53827
+  },
+  {
+   "kind": "squiggle",
+   "src": "images/translator-squiggle.png",
+   "x": 22.56,
+   "y": 549,
+   "w": 45,
+   "r": 7.11176
+  },
+  {
+   "kind": "squiggle",
+   "src": "images/translator-squiggle-2.png",
+   "x": 21.45,
+   "y": 713,
+   "w": 31,
+   "r": -6.39207
+  },
+  {
+   "kind": "squiggle",
+   "src": "images/translator-squiggle-3.png",
+   "x": 91.69,
+   "y": 622,
+   "w": 37,
+   "r": -7.38296
+  }
+ ]
+}
+</script>
+<script>
+// Placement. If a saved layout exists (made with ?edit), use it; otherwise the CSS defaults plus a random scatter.
+(function () {
+  var main = document.querySelector('main');
+  var SRCS = ['images/translator-squiggle.png', 'images/translator-squiggle-2.png', 'images/translator-squiggle-3.png'];
+  var layout = JSON.parse(document.getElementById('layout').textContent);
+  var EDIT = /[?&]edit/.test(location.search);
+
+  function place(el, it) {
+    el.style.position = 'absolute';
+    el.style.left = it.x + '%'; el.style.top = it.y + 'px';
+    el.style.width = it.w + 'px'; el.style.right = 'auto'; el.style.bottom = 'auto';
+    el.style.transform = 'rotate(' + (it.r || 0) + 'deg)';
+    var c = it.c || [0, 0, 0, 0];
+    el.style.clipPath = (c[0] || c[1] || c[2] || c[3]) ? 'inset(' + c[0] + '% ' + c[1] + '% ' + c[2] + '% ' + c[3] + '%)' : '';
+  }
+
+  if (layout) {
+    // fixed layout: everything lives directly in main
+    var towers = document.querySelectorAll('.tower');
+    towers.forEach(function (t) { main.appendChild(t); });
+    layout.items.forEach(function (it) {
+      var el;
+      if (it.kind === 'tower') el = document.querySelector('.tower.' + it.side);
+      else { el = document.createElement('img'); el.className = 'squiggle'; el.alt = ''; main.appendChild(el); }
+      el.src = it.src; place(el, it); el._it = it;
+    });
+    towers.forEach(function (t) { if (!t._it) t.remove(); });
+  } else {
+    var h1 = document.querySelector('h1');
+    var avoid = [];
+    document.querySelectorAll('.date, .sig').forEach(function (el) {
+      avoid.push([el.offsetTop - 50, el.offsetTop + el.offsetHeight + 30]);
+    });
+    function clear(y) { return avoid.every(function (r) { return y < r[0] || y > r[1]; }); }
+    var top = h1.offsetTop + 40, height = main.offsetHeight - top - 60, n = 9, band = height / n;
+    for (var i = 0; i < n; i++) {
+      var y, tries = 0;
+      do { y = top + i * band + Math.random() * band * 0.8; tries++; } while (!clear(y) && tries < 12);
+      if (!clear(y)) continue;
+      var img = document.createElement('img');
+      img.className = 'squiggle'; img.src = SRCS[i % 3]; img.alt = '';
+      img.style.left = (Math.random() * 100) + '%'; img.style.top = y + 'px';
+      img.style.transform = 'rotate(' + (Math.random() * 30 - 15) + 'deg) scale(' + (0.7 + Math.random() * 0.6) + ')';
+      main.appendChild(img);
+    }
+  }
+
+  if (!EDIT) return;
+
+  // ---------- edit mode ----------
+  var css = document.createElement('style');
+  css.textContent = '.tower,.squiggle{pointer-events:auto!important;cursor:grab;outline:1px dashed transparent}' +
+    '.tower:hover,.squiggle:hover{outline-color:#aaa}.selected{outline:1px solid #c33!important}' +
+    '#edbar{position:fixed;right:16px;top:16px;z-index:9;background:#fff;border:1px solid #ccc;padding:10px;font:12px/1.6 "Times New Roman",serif;width:230px}' +
+    '#edbar button{font:inherit;margin:2px 4px 2px 0}#edbar .ok{color:#080}#edbar .err{color:#c33}' +
+    '#edhandle{position:absolute;width:12px;height:12px;background:#c33;border:1px solid #fff;cursor:nwse-resize;z-index:9;display:none;touch-action:none}' +
+    '#edbar input{width:4em;font:inherit}' +
+    '.edcrop{position:absolute;background:#36c;border:1px solid #fff;z-index:9;display:none;touch-action:none}' +
+    '.edcrop.t,.edcrop.b{width:28px;height:8px;cursor:ns-resize}.edcrop.l,.edcrop.r{width:8px;height:28px;cursor:ew-resize}' +
+    '.cropping{outline:1px solid #36c!important}';
+  document.head.appendChild(css);
+  var bar = document.createElement('div'); bar.id = 'edbar';
+  bar.innerHTML = '<b>Edit mode</b><br>Drag to move. Scroll wheel over an item to resize. R / Shift+R rotates. Delete removes. C toggles crop (drag the blue edges).<br>' +
+    '<button data-add="0">+ squiggle 1</button><button data-add="1">+ squiggle 2</button><button data-add="2">+ squiggle 3</button><br>' +
+    'Size: <button id="edsmaller">&minus;</button><input id="edw" type="number" min="16" step="4"><button id="edbigger">+</button> px<br>' +
+    '<button id="edcropbtn">Crop</button> <button id="eduncrop">Reset crop</button><br>' +
+    '<button id="edsave"><b>Save to file</b></button> <button id="edreload">Reload</button><div id="edmsg"></div>';
+  document.body.appendChild(bar);
+  var msg = document.getElementById('edmsg');
+
+  // seed items from whatever is rendered now
+  var items = [];
+  function mainRect() { return main.getBoundingClientRect(); }
+  function seedFrom(el, kind, side) {
+    var cur = el._it;
+    var r = el.getBoundingClientRect(), m = mainRect();
+    var w = cur ? cur.w : el.offsetWidth;
+    var rot = cur ? (cur.r || 0) : (parseFloat((el.style.transform.match(/rotate\(([-\d.]+)deg/) || [0, 0])[1]) || 0);
+    var sc = cur ? 1 : (parseFloat((el.style.transform.match(/scale\(([\d.]+)/) || [0, 1])[1]) || 1);
+    var it = cur || { kind: kind, side: side, src: el.getAttribute('src'),
+      x: (r.left + r.width / 2 - w * sc / 2 - m.left) / m.width * 100,
+      y: r.top + r.height / 2 - (w * sc * (el.naturalHeight / el.naturalWidth || 1)) / 2 - m.top,
+      w: Math.round(w * sc), r: rot };
+    el._it = it; items.push({ el: el, it: it });
+    if (el.parentNode !== main) main.appendChild(el);
+    el.style.transform = ''; // strip scale, then place cleanly
+    place(el, it);
+  }
+  function seedAll() {
+    document.querySelectorAll('.tower.left').forEach(function (e) { seedFrom(e, 'tower', 'left'); });
+    document.querySelectorAll('.tower.right').forEach(function (e) { seedFrom(e, 'tower', 'right'); });
+    document.querySelectorAll('.squiggle').forEach(function (e) { seedFrom(e, 'squiggle'); });
+  }
+  var pending = document.querySelectorAll('img.tower, img.squiggle').length, loaded = 0;
+  document.querySelectorAll('img.tower, img.squiggle').forEach(function (im) {
+    if (im.complete) { if (++loaded === pending) seedAll(); }
+    else im.addEventListener('load', function () { if (++loaded === pending) seedAll(); });
+  });
+
+  var sel = null, drag = null, rs = null;
+  var handle = document.createElement('div'); handle.id = 'edhandle'; main.appendChild(handle);
+  var wIn = document.getElementById('edw');
+  function syncHandle() {
+    if (!sel) { handle.style.display = 'none'; return; }
+    var r = sel.getBoundingClientRect(), m = mainRect();
+    handle.style.display = 'block';
+    handle.style.left = (r.right - m.left - 6) + 'px'; handle.style.top = (r.bottom - m.top - 6) + 'px';
+    wIn.value = sel._it.w;
+  }
+  var cropping = false, cr = null;
+  var cropH = {};
+  ['t', 'r', 'b', 'l'].forEach(function (k) {
+    var d = document.createElement('div'); d.className = 'edcrop ' + k; main.appendChild(d); cropH[k] = d;
+    d.addEventListener('pointerdown', function (e) {
+      e.preventDefault(); e.stopPropagation(); d.setPointerCapture(e.pointerId);
+      cr = { k: k, sx: e.clientX, sy: e.clientY, c: (sel._it.c || [0, 0, 0, 0]).slice() };
+    });
+    d.addEventListener('pointermove', function (e) {
+      if (!cr || !sel) return;
+      var it = sel._it, h = it.w * (sel.naturalHeight / sel.naturalWidth || 1), m = mainRect();
+      var c = cr.c.slice(), dx = (e.clientX - cr.sx) / it.w * 100, dy = (e.clientY - cr.sy) / h * 100;
+      if (cr.k === 't') c[0] += dy; if (cr.k === 'b') c[2] -= dy; if (cr.k === 'l') c[3] += dx; if (cr.k === 'r') c[1] -= dx;
+      for (var i = 0; i < 4; i++) c[i] = Math.max(0, Math.min(90, Math.round(c[i] * 10) / 10));
+      it.c = c; place(sel, it); syncCrop();
+    });
+    d.addEventListener('pointerup', function () { cr = null; });
+  });
+  function syncCrop() {
+    var show = cropping && sel;
+    ['t', 'r', 'b', 'l'].forEach(function (k) { cropH[k].style.display = show ? 'block' : 'none'; });
+    if (!show) return;
+    var it = sel._it, m = mainRect(), w = it.w, h = w * (sel.naturalHeight / sel.naturalWidth || 1);
+    var x0 = it.x / 100 * m.width, y0 = it.y, c = it.c || [0, 0, 0, 0];
+    var L = x0 + w * c[3] / 100, R = x0 + w * (1 - c[1] / 100), T = y0 + h * c[0] / 100, B = y0 + h * (1 - c[2] / 100);
+    cropH.t.style.left = ((L + R) / 2 - 14) + 'px'; cropH.t.style.top = (T - 4) + 'px';
+    cropH.b.style.left = ((L + R) / 2 - 14) + 'px'; cropH.b.style.top = (B - 4) + 'px';
+    cropH.l.style.left = (L - 4) + 'px'; cropH.l.style.top = ((T + B) / 2 - 14) + 'px';
+    cropH.r.style.left = (R - 4) + 'px'; cropH.r.style.top = ((T + B) / 2 - 14) + 'px';
+  }
+  function setCropping(on) { cropping = on && !!sel; if (sel) sel.classList.toggle('cropping', cropping); syncCrop(); }
+  function select(el) {
+    if (sel) { sel.classList.remove('selected'); sel.classList.remove('cropping'); }
+    sel = el; if (sel) sel.classList.add('selected'); cropping = false; syncHandle(); syncCrop();
+  }
+  document.getElementById('edcropbtn').onclick = function () { setCropping(!cropping); };
+  document.getElementById('eduncrop').onclick = function () { if (sel) { sel._it.c = [0, 0, 0, 0]; place(sel, sel._it); syncCrop(); } };
+  function setW(w) { if (!sel) return; sel._it.w = Math.max(16, Math.round(w)); place(sel, sel._it); syncHandle(); syncCrop(); }
+  handle.addEventListener('pointerdown', function (e) {
+    e.preventDefault(); e.stopPropagation(); handle.setPointerCapture(e.pointerId);
+    rs = { sx: e.clientX, w: sel._it.w };
+  });
+  handle.addEventListener('pointermove', function (e) { if (rs) setW(rs.w + (e.clientX - rs.sx)); });
+  handle.addEventListener('pointerup', function () { rs = null; });
+  document.getElementById('edsmaller').onclick = function () { setW(sel ? sel._it.w * 0.9 : 0); };
+  document.getElementById('edbigger').onclick = function () { setW(sel ? sel._it.w * 1.1 : 0); };
+  wIn.addEventListener('input', function () { if (+wIn.value >= 16) setW(+wIn.value); });
+  main.addEventListener('pointerdown', function (e) {
+    if (e.target === handle || e.target.classList.contains('edcrop')) return;
+    var el = e.target.closest('.tower, .squiggle'); if (!el) return;
+    e.preventDefault(); select(el); el.setPointerCapture(e.pointerId);
+    drag = { el: el, sx: e.clientX, sy: e.clientY, x: el._it.x, y: el._it.y };
+  });
+  main.addEventListener('pointermove', function (e) {
+    if (!drag) return; var m = mainRect();
+    drag.el._it.x = drag.x + (e.clientX - drag.sx) / m.width * 100;
+    drag.el._it.y = drag.y + (e.clientY - drag.sy);
+    place(drag.el, drag.el._it); syncHandle(); syncCrop();
+  });
+  main.addEventListener('pointerup', function () { drag = null; syncHandle(); });
+  main.addEventListener('wheel', function (e) {
+    var el = e.target.closest('.tower, .squiggle'); if (!el) return;
+    e.preventDefault(); select(el);
+    setW(el._it.w * (e.deltaY < 0 ? 1.05 : 0.95));
+  }, { passive: false });
+  document.addEventListener('keydown', function (e) {
+    if (!sel || e.target.tagName === 'INPUT') return;
+    if (e.key === 'r' || e.key === 'R') { sel._it.r = (sel._it.r || 0) + (e.shiftKey ? -5 : 5);  place(sel, sel._it); syncHandle(); syncCrop(); }
+    if (e.key === 'c' || e.key === 'C') setCropping(!cropping);
+    if (e.key === '=' || e.key === '+') setW(sel._it.w * 1.1);
+    if (e.key === '-' || e.key === '_') setW(sel._it.w * 0.9);
+    if (e.key === 'Delete' || e.key === 'Backspace') {
+      e.preventDefault(); items = items.filter(function (p) { return p.el !== sel; }); sel.remove(); select(null);
+    }
+  });
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.add !== undefined) {
+      var img = document.createElement('img'); img.className = 'squiggle'; img.alt = ''; img.src = SRCS[+b.dataset.add];
+      var it = { kind: 'squiggle', src: img.src.replace(location.href.replace(/[^/]*$/, ''), ''), x: 40, y: window.scrollY + 200 - mainRect().top - window.scrollY + 0, w: 44, r: 0 };
+      it.y = window.scrollY + window.innerHeight / 2 - (mainRect().top + window.scrollY);
+      main.appendChild(img); img._it = it; place(img, it); items.push({ el: img, it: it }); select(img);
+    }
+    if (b.id === 'edreload') location.reload();
+    if (b.id === 'edsave') save();
+  });
+  function save() {
+    var out = { items: items.map(function (p) {
+      var it = p.it; var o = { kind: it.kind, side: it.side, src: it.src, x: +it.x.toFixed(2), y: Math.round(it.y), w: it.w, r: it.r || 0 };
+      if (it.c && (it.c[0] || it.c[1] || it.c[2] || it.c[3])) o.c = it.c; return o;
+    }) };
+    fetch('/save', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file: 'my-translator.html', layout: out }) })
+      .then(function (r) { return r.text().then(function (t) { msg.className = r.ok ? 'ok' : 'err'; msg.textContent = t; }); })
+      .catch(function () {
+        msg.className = 'err'; msg.textContent = 'No server running. Start it with: python3 edit.py';
+      });
+  }
+})();
+</script>
+</body>
+</html>
